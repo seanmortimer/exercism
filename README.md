@@ -1,2 +1,2 @@
-# exercism
-Files for exercism.io problems
+# Exercism
+Files for [exercism.io] problems.
