@@ -1,9 +1,3 @@
-//
-// This is only a SKELETON file for the 'Resistor Color Duo' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-
 const bandColors = {
   black: 0,
   brown: 1,
@@ -17,8 +11,10 @@ const bandColors = {
   white: 9,
 }
 
+const resistance = (color) => bandColors[color];
+
 export const decodedValue = (colors) => {
-  const value1 = bandColors[colors[0]];
-  const value2 = bandColors[colors[1]];
-  return 10 * value1 + value2;
+  const band1 = resistance(colors[0]);
+  const band2 = resistance(colors[1]);
+  return 10 * band1 + band2;
 };

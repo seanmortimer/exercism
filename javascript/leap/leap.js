@@ -1,20 +1,13 @@
-//
-// This is only a SKELETON file for the 'Leap' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+const divisibleBy = (a, b) => a % b === 0;
 
 export const isLeap = (year) => {
   let leap = false;
 
-  if (year % 4 === 0) {
+  if (divisibleBy(year, 4) && !divisibleBy(year, 100)) {
     leap = true;
-    if (year % 100 === 0) {
-      leap = false;
-      if (year % 400 === 0) {
-        leap = true;
-      }
-    }
   }
-  
+  if (divisibleBy(year, 400)) {
+    leap = true;
+  }
   return leap;
-};
+}
